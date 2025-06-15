@@ -1,1 +1,108 @@
+<!-- index.html for Triage Pro -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triage Pro – Smarter Clinical Decisions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white border-b p-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">Triage Pro</h1>
+      <nav class="text-sm">
+        <a href="#features" class="ml-6 text-gray-600 hover:text-blue-700">Features</a>
+        <a href="#about" class="ml-6 text-gray-600 hover:text-blue-700">About</a>
+        <a href="#demo" class="ml-6 text-gray-600 hover:text-blue-700">Demo</a>
+        <a href="#contact" class="ml-6 text-gray-600 hover:text-blue-700">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-blue-100 py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold text-blue-800 mb-4">AI-Powered Clinical Assistant</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        Triage Pro helps healthcare professionals make faster, evidence-based decisions on symptoms, diagnosis, and treatment — from GP clinics to massage therapy rooms.
+      </p>
+      <a href="#contact" class="bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800">Request Early Access</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">🔬 AI Symptom Triage</h3>
+        <p class="text-gray-600">Quickly narrow down differential diagnoses using real-time AI evaluation.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">💊 Treatment & Referral Advice</h3>
+        <p class="text-gray-600">Get guidance on first-line treatments, exercises, or when to escalate to a specialist.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">📁 Patient Summaries</h3>
+        <p class="text-gray-600">Auto-generate clinical notes and suggested documentation formats.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-gray-100 py-16">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">Built for Health Professionals</h2>
+      <p class="text-gray-700 text-lg mb-4">
+        Whether you're a massage therapist, allied health provider, or doctor, Triage Pro is designed to support clinical reasoning — not replace it. It’s your intelligent second opinion.
+      </p>
+      <p class="text-sm text-gray-500">Backed by medical guidelines, real clinical data, and privacy-first design.</p>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Live Demo</h2>
+      <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+        <p class="mb-2 text-gray-700">Try typing a sample patient symptom:</p>
+        <input type="text" id="symptomInput" placeholder="e.g., lower back pain, fatigue..." class="w-full p-3 rounded border border-gray-300 mb-4" />
+        <button onclick="showDemoResponse()" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800">Analyze</button>
+        <div id="demoOutput" class="mt-4 text-gray-800 font-mono whitespace-pre-wrap"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 text-center bg-white">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-700">Partner with Triage Pro</h2>
+    <p class="mb-4 text-gray-600">Interested in early trials or integration? Reach out below.</p>
+    <a href="mailto:contact@triagepro.ai" class="bg-blue-700 text-white px-5 py-3 rounded hover:bg-blue-800">Email Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-6 bg-gray-50">
+    &copy; 2025 Triage Pro. All rights reserved.
+  </footer>
+
+  <!-- Demo Script -->
+  <script>
+    function showDemoResponse() {
+      const input = document.getElementById('symptomInput').value.toLowerCase();
+      let response = "";
+
+      if (input.includes("back")) {
+        response = "Possible Conditions:\\n- Muscular strain\\n- Herniated disc\\n- Sciatica\\n\\nRecommended Actions:\\n- Refer to physio or massage therapy\\n- Prescribe NSAIDs if appropriate";
+      } else if (input.includes("fatigue")) {
+        response = "Possible Conditions:\\n- Iron deficiency\\n- Sleep disorder\\n- Chronic fatigue syndrome\\n\\nRecommended Actions:\\n- Order blood test\\n- Review lifestyle and sleep hygiene";
+      } else {
+        response = "Analyzing...\\n\\nPlease enter a symptom to get possible diagnoses and recommendations.";
+      }
+
+      document.getElementById('demoOutput').innerText = response;
+    }
+  </script>
+</body>
+</html>
 
